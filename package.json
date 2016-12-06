@@ -1,0 +1,38 @@
+{
+  "name": "cordova-plugin-sample",
+  "version": "1.0.0",
+  "description": "Cordova Sample Echo Plugin",
+  "cordova": {
+    "id": "cordova-plugin-sample",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hitdev01/cordova-plugin-sample"
+  },
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "scripts": {
+    "test": "npm run jshint",
+    "jshint": "jshint www && jshint src && jshint tests"
+  },
+  "author": "hitdev01",
+  "license": "MIT",
+  "engines": {
+    "cordovaDependencies": {
+      "2.0.0": {
+        "cordova": "^6.4.0"
+      }
+    }
+  },
+  "devDependencies": {
+    "jshint": "^2.6.0"
+  }
+}
