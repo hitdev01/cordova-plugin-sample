@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-sample"
+    version="1.0.0">
+
+    <name>CordovaSamplePlugin</name>
+    <description>Cordova Sample Plugin</description>
+    <license>MIT</license>
+    <keywords>cordova</keywords>
+
+    <js-module src="www/echo.js" name="echo">
+        <clobbers target="navigator.echo" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Echo">
+                <param name="android-package" value="com.hitdev01.cordova.sampleplugin.Echo"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+        </config-file>
+
+        <source-file src="src/android/com/hitdev01/cordova/sampleplugin/Echo.java" target-dir="src/com/hitdev01/cordova/sampleplugin" />
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Echo">
+                <param name="ios-package" value="CDVEcho" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/ios/CDVEcho.m" />
+    </platform>
+
+</plugin>
